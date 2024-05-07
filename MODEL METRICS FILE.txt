@@ -1,0 +1,40 @@
+MODEL METRICS FILE
+Comprises of:
+- TF-IDF
+- NearestNeighbor
+
+TF-IDF:
+- Hyperparameters:
+	- stop_words='english'
+	- max_df=0.55
+	- min_df=3
+	- ngram_range=(2, 2)
+
+NearestNeighbor:
+- Hyperparameters:
+	- metric='cosine'
+	- algorithm='brute'
+	- n_neighbors=10
+
+Amazon Data Parameters:
+- 'product_id': The ID of the product
+- 'product_name': What the product was called
+- 'category': What category the product belonged to
+- 'rating': How many stars out of 5 the product had
+- 'rating_count': How many stars the product had
+- 'about_product': The product description
+- 'user_id': User Identification 
+- 'review_content': The reviews that were left under the product
+- 'sentiment': The sentiment analysis of all the reviews
+- 'combined_text': The combined text of product_name, category, about_product, and review_content
+- 'Encoded_Sentiment':Was labeled either Positive, Neutral, or Negative
+
+After using those hyperparameters, I was able to get a recommendation system that had obtained 10 
+supporting items that would make sense to purchase while purchasing the other product ID. In terms o
+f similarity, the products it recommends tends to have a flaw where there is overlapping products that do 
+end up being similar, however in terms of supporting items, there tends to be a lack of depth and creativity in 
+terms of finding products. However, one would say that this is okay because it creates a nice ratio of where 5 
+products tend to be the same, which are in fact related to original product giving a nice variety of options, where as 
+the other 5 products it recommends tends to be different from each other but are supporting the original product that might be bought along. 
+
+Due to the fact that there is no accuracy metric to determine whether the products that are being recommended are actually good in leading sales, but from a logical sense, when purchasing a product, you would want similar products to look at which offer variety in case you found a slight flaw in the product you are looking at and wanted other options. Not only that, it would make sense to also want supporting products which offer great value that pair well with the product in that a sense as well. I think the recommendation product isn't perfect but a good start, and I would not be mad to use this in my online website store if I had one. 
